@@ -1,6 +1,6 @@
 class TicTacToe
   
-attr_accessor :board
+attr_reader :board
 
 WIN_COMBINATIONS = [
   [0,1,2], #top row 
@@ -13,8 +13,8 @@ WIN_COMBINATIONS = [
   [2,4,6], # diagonal 2
   ]
 
- def initialize(board = nil)
-   @board = board || Array.new(9, " ")
+ def initialize
+   @board = Array.new(9, " ")
  end
 
 def display_board
